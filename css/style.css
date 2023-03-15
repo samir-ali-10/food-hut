@@ -42,6 +42,12 @@ h5 {
     margin: auto;
 }
 
+.special_heading {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
 /*********************** Start NavBar ************************************/
 
 header {
@@ -141,9 +147,147 @@ header .content .our_moto button {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    cursor: pointer;
 }
 
 /*********************** End NavBar ************************************/
+/*********************** Start About ************************************/
+
+.about {
+    background-color: var(--background-color);
+    padding-bottom: 80px;
+}
+
+.about .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about .content .food img {
+    max-width: 100%;
+}
+
+.about .content .info {
+    padding-top: 150px;
+    max-width: 40%;
+    margin-left: 150px;
+}
+
+.about .content .info h2 {
+    font-size: 3rem;
+}
+
+.about .content .info p,
+.about .content .info span {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.about .content .info span {
+    font-weight: 800;
+}
+
+/*********************** End About ************************************/
+/*********************** Start Menu ************************************/
+
+.menu {
+    background-color: var(--background-color);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.menu h1 {
+    padding-bottom: 130px;
+}
+
+.menu .variety {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.menu .variety>* {
+    width: calc(90% / 4);
+}
+
+.menu .variety img {
+    padding-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+    -ms-transition: transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+}
+
+.menu .variety img:hover {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+}
+
+/*********************** End Menu ************************************/
+/*********************** Start Reservation ************************************/
+
+.reservation {
+    text-align: center;
+    background-image: url(../imgs/book-table-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.reservation .content {
+    position: relative;
+    padding-top: 130px;
+}
+
+.reservation::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    opacity: 0.8;
+}
+
+.reservation h1 {
+    padding-bottom: 60px;
+}
+
+.reservation form .main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.reservation form .main>* {
+    width: calc(90% / 4);
+}
+
+.reservation form input {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    font-size: 1.5rem;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+}
+
+.reservation form input[type="submit"] {
+    text-transform: uppercase;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    margin-top: 80px;
+}
+
+
+/*********************** End Reservation ************************************/
 
 /******************************* Media Queries *************************/
 
@@ -151,8 +295,8 @@ header .content .our_moto button {
     :root {
         font-size: 13px;
     }
-    
-    header nav .logo  {
+
+    header nav .logo {
         order: 1;
     }
 
@@ -171,5 +315,52 @@ header .content .our_moto button {
 
     header nav .components li {
         display: none;
+    }
+
+
+    .menu .variety>* {
+        width: calc(90% / 3);
+    }
+
+
+    .reservation form .main>* {
+        width: calc(90% / 2);
+    }
+}
+
+@media (max-width: 750px) {
+    :root {
+        font-size: 10px;
+    }
+
+    .menu .variety>* {
+        width: calc(90% / 2);
+    }
+}
+
+@media (max-width: 550px) {
+    :root {
+        font-size: 8px;
+    }
+
+    .menu .variety>* {
+        width: calc(90% / 1);
+    }
+
+    .reservation form .main>* {
+        width: calc(90% / 1);
+        margin: 0 auto 25px auto;
+    }
+}
+
+@media (max-width: 1501px) {
+
+    .about .content .food {
+        display: none;
+    }
+
+    .about .content .info {
+        max-width: 90%;
+        margin: auto;
     }
 }
