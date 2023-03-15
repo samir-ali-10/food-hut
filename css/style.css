@@ -122,6 +122,28 @@ header nav ul button {
     cursor: pointer;
 }
 
+header nav .components select {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    display: none;
+}
+
+header nav .components select option {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+}
+
 header .content .our_moto {
     padding-top: 150px;
     padding-bottom: 300px;
@@ -325,6 +347,14 @@ header .content .our_moto button {
 
     .reservation form .main>* {
         width: calc(90% / 2);
+    }
+
+    header nav ul button {
+        display: none;
+    }
+
+    header nav .components select {
+        display: block;
     }
 }
 
