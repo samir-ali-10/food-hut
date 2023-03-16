@@ -407,6 +407,76 @@ header .content .our_moto button {
 }
 
 /*********************** End Events ************************************/
+/*********************** Start Reviews ************************************/
+
+.reviews {
+    background-color: var(--background-color);
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.reviews h1 {
+    margin-bottom: 70px;
+}
+
+.reviews .people_reviews {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.reviews .people_reviews > * {
+    width: calc(90% / 3);
+}
+
+.reviews .people_reviews .review h2 {
+    font-size: 2rem;
+}
+
+.reviews .people_reviews .review p {
+    color: var(--grey-text);
+    font-size: 1.1rem;
+}
+
+.reviews .people_reviews .review h2,
+.reviews .people_reviews .review p {
+    text-transform: capitalize;
+}
+
+.reviews .people_reviews .review .content {
+    line-height: 1.6;
+    font-size: 1.2rem;
+    padding: 20px 20px;
+    border: 1px solid var(--grey-text);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-top: 2px solid var(--secondary-color);
+    margin-top: 30px;
+    position: relative;
+}
+
+.reviews .people_reviews .review .content::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -12px;
+    left: 50%;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    background-color: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-bottom: none;
+    border-right: none;
+}
+
+/*********************** End Reviews ************************************/
 
 /******************************* Media Queries *************************/
 
@@ -458,6 +528,14 @@ header .content .our_moto button {
     .events .main_dishes .card {
         width: calc(90% / 2);
     }
+
+    .reviews .people_reviews > * {
+        width: calc(90% / 2);
+    }
+
+    .reviews .people_reviews .review {
+        margin-bottom: 25px;
+    }
 }
 
 @media (max-width: 750px) {
@@ -501,6 +579,11 @@ header .content .our_moto button {
 
     .events .links a.active {
         margin-right: auto;
+    }
+
+    .reviews .people_reviews > * {
+        width: calc(90% / 1);
+        margin: auto;
     }
 }
 
