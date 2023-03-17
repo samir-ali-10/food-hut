@@ -15,7 +15,6 @@
 body {
     margin: 0;
     font-family: 'Golos Text', sans-serif;
-    height: 50000px;
     color: var(--primary-color);
 }
 
@@ -425,7 +424,7 @@ header .content .our_moto button {
     flex-wrap: wrap
 }
 
-.reviews .people_reviews > * {
+.reviews .people_reviews>* {
     width: calc(90% / 3);
 }
 
@@ -477,6 +476,101 @@ header .content .our_moto button {
 }
 
 /*********************** End Reviews ************************************/
+/*********************** Start find_us ************************************/
+
+.find_us {
+    background-color: var(--background-color);
+    border-top: 1px solid var(--grey-text);
+    border-bottom: 1px solid var(--grey-text);
+}
+
+.find_us .content {
+    display: flex;
+}
+
+.find_us .content .info {
+    max-width: 40%;
+    padding-top: 100px;
+    text-align: left;
+}
+
+.find_us .content .info h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.find_us .content .info p {
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+.find_us .content .info .links {
+    display: flex;
+    flex-direction: column;
+}
+
+.find_us .content .info .links a {
+    color: var(--grey-text);
+    margin-left: 20px;
+}
+
+.find_us .content .info .links i {
+    margin-bottom: 25px;
+    color: var(--grey-text);
+}
+
+/*********************** End find_us ************************************/
+/*********************** Start Contacts ************************************/
+
+.contacts {
+    background-color: var(--background-color);
+    padding: 90px 0;
+    border-bottom: 1px solid var(--grey-text);
+}
+
+.contacts .content {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts .content > div {
+    text-align: center;
+}
+
+.contacts .content > div h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.contacts .content > div a {
+    color: var(--grey-text);
+}
+
+/*********************** End Contacts ************************************/
+/*********************** Start Footer ************************************/
+
+footer {
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer .copyright {
+    color: var(--grey-text);
+}
+
+footer .copyright i,
+footer .copyright span {
+    color: var(--secondary-color);
+}
+
+/*********************** End Footer ************************************/
 
 /******************************* Media Queries *************************/
 
@@ -529,12 +623,22 @@ header .content .our_moto button {
         width: calc(90% / 2);
     }
 
-    .reviews .people_reviews > * {
+    .reviews .people_reviews>* {
         width: calc(90% / 2);
     }
 
     .reviews .people_reviews .review {
         margin-bottom: 25px;
+    }
+
+
+    .find_us .content {
+        flex-wrap: wrap;
+    }
+
+    .find_us .content .info {
+        max-width: 100%;
+        margin-left: 30px;
     }
 }
 
@@ -581,9 +685,26 @@ header .content .our_moto button {
         margin-right: auto;
     }
 
-    .reviews .people_reviews > * {
+    .reviews .people_reviews>* {
         width: calc(90% / 1);
         margin: auto;
+    }
+
+    .find_us .content .mapouter {
+        display: none;
+    }
+
+    .find_us .content .info {
+        padding: 50px 0;
+    }
+
+
+    .contacts .content {
+        flex-direction: column;
+    }
+
+    .contacts .content > div {
+        margin-bottom: 40px;
     }
 }
 
