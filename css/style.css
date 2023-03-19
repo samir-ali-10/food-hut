@@ -190,7 +190,7 @@ header .content .our_moto button {
 
 .about .content {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .about .content .food img {
@@ -640,6 +640,16 @@ footer .copyright span {
         max-width: 100%;
         margin-left: 30px;
     }
+
+
+    .about .content .food {
+        display: none;
+    }
+
+    .about .content .info {
+        max-width: 90%;
+        margin: auto;
+    }
 }
 
 @media (max-width: 750px) {
@@ -710,12 +720,5 @@ footer .copyright span {
 
 @media (max-width: 1501px) {
 
-    .about .content .food {
-        display: none;
-    }
 
-    .about .content .info {
-        max-width: 90%;
-        margin: auto;
-    }
 }
