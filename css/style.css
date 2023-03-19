@@ -650,6 +650,10 @@ footer .copyright span {
         max-width: 90%;
         margin: auto;
     }
+
+    header .content .links {
+        display: none;
+    }
 }
 
 @media (max-width: 750px) {
