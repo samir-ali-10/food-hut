@@ -576,7 +576,7 @@ footer .copyright span {
 
 @media (max-width: 900px) {
     :root {
-        font-size: 13px;
+        font-size: 10px;
     }
 
     header nav .logo {
@@ -658,7 +658,7 @@ footer .copyright span {
 
 @media (max-width: 750px) {
     :root {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .menu .variety>* {
@@ -668,7 +668,7 @@ footer .copyright span {
 
 @media (max-width: 550px) {
     :root {
-        font-size: 8px;
+        font-size: 6px;
     }
 
     .menu .variety>* {
@@ -720,9 +720,4 @@ footer .copyright span {
     .contacts .content > div {
         margin-bottom: 40px;
     }
-}
-
-@media (max-width: 1501px) {
-
-
 }
